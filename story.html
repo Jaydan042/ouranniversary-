@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Story ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  // Password protection
+  const password = "J&J"; // change to your secret password
+  let attempt = prompt("Enter the password to view our story:");
+  if(attempt !== password){
+    alert("Incorrect password! Redirecting back.");
+    window.location.href = "index.html";
+  }
+</script>
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="media/music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="content">
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h1>Happy 1st Anniversary to US</h1>
+    <h2>Iyanuloluwa Joan Alebiosu</h2>
+    <p>My Princess 👑</p>
+  </section>
+
+  <!-- Our Story Section -->
+  <section>
+    <h2>From a Journey to Forever</h2>
+    <p>
+      Sometimes destiny doesn’t knock politely. Sometimes it breaks down on the road.<br><br>
+      We met on a journey back from camp after countless stops and a vehicle that refused to cooperate.  
+      What felt like an inconvenience became the beginning of everything.<br><br>
+      Talking turned to friendship. Friendship turned to love.  
+      And my heart found its home.
+    </p>
+  </section>
+
+  <!-- Why You Mean Everything Section -->
+  <section>
+    <h2>Why You Mean Everything to Me</h2>
+    <p>
+      I love how you go all out for me, your sacrifices and consistency touch my heart.<br><br>
+      I love the way you carry yourself with confidence and grace, giving me the bold certainty that you are my woman.<br><br>
+      And your beauty alone speaks volumes this is why I call you my princess.  
+      You deserve to be treated as one.
+    </p>
+  </section>
+
+  <!-- Slideshow Section -->
+  <section id="gallery">
+    <h2>Our Memories 📸</h2>
+    <div class="slideshow">
+      <img src="media/photos/photo1.jpeg" alt="Memory 1" class="active">
+      <img src="media/photos/photo2.jpeg" alt="Memory 2">
+      <img src="media/photos/photo3.jpeg" alt="Memory 3">
+      <img src="media/photos/photo4.jpg" alt="Memory 4">
+      <img src="media/photos/photo5.jpg" alt="Memory 5">
+      <img src="media/photos/photo6.jpg" alt="Memory 6">
+      <img src="media/photos/photo7.jpg" alt="Memory 7">
+      <img src="media/photos/photo8.jpg" alt="Memory 8">
+      <img src="media/photos/photo9.jpg" alt="Memory 9">
+    </div>
+    
+  </section>
+
+  <!-- Video Section -->
+  <section id="videos">
+    <h2>Special Moments 🎥</h2>
+    <div class="video-thumbs">
+      <img src="media/photos/video1-thumb.jpeg" alt="Video 1" onclick="openVideo('media/videos/video1.mp4')">
+      <img src="media/photos/video2-thumb.jpeg" alt="Video 2" onclick="openVideo('media/videos/video2.mp4')">
+      <img src="media/photos/video3-thumb.jpg" alt="Video 3" onclick="openVideo('media/videos/video3.mp4')">
+      <img src="media/photos/video4-thumb.jpg" alt="Video 4" onclick="openVideo('media/videos/video4.mp4')">
+      <img src="media/photos/video5-thumb.jpg" alt="Video 5" onclick="openVideo('media/videos/video5.mp4')">
+    </div>
+  </section>
+
+  <!-- Promise Section -->
+  <section>
+    <h2>My Promise</h2>
+    <p>
+      I believe with all my heart that I will live with you till death do us part.<br><br>
+      One year down… a lifetime to go.
+    </p>
+  </section>
+
+  <!-- Prayer Section -->
+  <section>
+    <h2>A Prayer for Us 🙏</h2>
+    <p>
+      Dear God, thank You for bringing us together. Teach us patience, love, and understanding.  
+      Let our home be filled with peace and joy, and let our love always be rooted in You. Amen.
+    </p>
+  </section>
+
+  <!-- Hidden Message Section -->
+  <section id="final-message">
+    <h2>💌 A Secret for You</h2>
+    <p id="hidden-msg">I love you more each day, my princess. Forever and always. ❤️</p>
+    <button onclick="revealMessage()">Reveal</button>
+  </section>
+
+</div>
+
+<!-- Video Overlay -->
+<div id="video-overlay" onclick="closeVideo()">
+  <video id="popup-video" controls></video>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
